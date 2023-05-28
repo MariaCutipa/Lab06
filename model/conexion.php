@@ -1,7 +1,7 @@
 <?php 
 $contrasena = "AVNS_4_kzRPbMLHxIe24b7DG";
 $usuario = "doadmin";
-$nombre_bd = "defaultdb";
+$nombre_bd = "Registro";
 $puerto = "25060";
 try {
 	$bd = new PDO (

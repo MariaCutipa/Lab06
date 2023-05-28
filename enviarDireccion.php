@@ -9,7 +9,7 @@ $codigo = $_GET['codigo'];
 
 $sentencia = $bd->prepare("SELECT pro.promocion, pro.duracion , pro.id_apoderado, per.nombres , per.apellido_paterno ,per.apellido_materno,per.celular , per.fecha_nacimiento 
   FROM promociones pro 
-  INNER JOIN apoderado per ON per.id = pro.id_apoderado 
+  INNER JOIN Apoderado per ON per.id = pro.id_apoderado 
   WHERE pro.id = ?;");
 $sentencia->execute([$codigo]);
 $persona = $sentencia->fetch(PDO::FETCH_OBJ);

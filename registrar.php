@@ -14,7 +14,7 @@ $DNI = $_POST["txtDni"];
 $celular = $_POST["txtCelular"];
 $email= $_POST["txtEmail"];
 
-$sentencia = $bd->prepare("INSERT INTO apoderado(nombres,apellido_paterno,apellido_materno,fecha_nacimiento,DNI,celular,email) VALUES (?,?,?,?,?,?,?);");
+$sentencia = $bd->prepare("INSERT INTO Apoderado(nombres,apellido_paterno,apellido_materno,fecha_nacimiento,DNI,celular,email) VALUES (?,?,?,?,?,?,?);");
 $resultado = $sentencia->execute([$nombres, $ap_paterno, $ap_materno, $fecha_nacimiento, $DNI, $celular, $email]);
 
 if ($resultado === TRUE) {

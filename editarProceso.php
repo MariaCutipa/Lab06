@@ -14,7 +14,7 @@
     $celular = $_POST['txtCelular'];
     $email= $_POST['txtEmail'];
 
-    $sentencia = $bd->prepare("UPDATE apoderado SET nombres = ?, apellido_paterno = ?, apellido_materno = ?,fecha_nacimiento = ?,DNI = ?,celular = ?,email = ? where id = ?;");
+    $sentencia = $bd->prepare("UPDATE Apoderado SET nombres = ?, apellido_paterno = ?, apellido_materno = ?,fecha_nacimiento = ?,DNI = ?,celular = ?,email = ? where id = ?;");
     $resultado = $sentencia->execute([$nombres, $apellido_paterno, $apellido_materno, $fecha_nacimiento, $DNI, $celular, $email,$codigo]);
 
     if ($resultado === TRUE) {

@@ -4,7 +4,7 @@
 include_once "model/conexion.php";
 $codigo = $_GET['codigo'];
 
-$sentencia = $bd->prepare("select * from apoderado where id = ?;");
+$sentencia = $bd->prepare("select * from Apoderado where id = ?;");
 $sentencia->execute([$codigo]);
 $apoderado = $sentencia->fetch(PDO::FETCH_OBJ);
 

@@ -7,8 +7,11 @@
     include 'model/conexion.php';
     $codigo = $_GET['codigo'];
     
-    $sentencia = $bd->prepare("DELETE FROM apoderado where id = ?;");
+    $sentencia1 = $bd->prepare("DELETE FROM promociones where id_apoderado = ?;");
+    $sentencia = $bd->prepare("DELETE FROM Apoderado where id = ?;");
+    $resultado1 = $sentencia1->execute([$codigo]);
     $resultado = $sentencia->execute([$codigo]);
+
 
     if ($resultado === TRUE){
         header('Location: index.php?mensaje=eliminado');
