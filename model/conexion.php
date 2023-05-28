@@ -1,11 +1,11 @@
 <?php 
-$contrasena = "";
-$usuario = "root";
+$contrasena = "AVNS_4_kzRPbMLHxIe24b7DG";
+$usuario = "doadmin";
 $nombre_bd = "Registro";
 
 try {
 	$bd = new PDO (
-		'mysql:host=localhost;
+		'mysql:host=db-mysql-nyc1-83352-do-user-14161302-0.b.db.ondigitalocean.com;
 		dbname='.$nombre_bd,
 		$usuario,
 		$contrasena,
